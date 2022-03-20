@@ -38,6 +38,8 @@ jobs:
           version: "6.7"
           run_install: true
       - name: Compile Tests
-        run: pnpm build
+        run: |
+          pnpm build:index-js
+          pnpm build:tsc
       - name: Run Tests
         run: pnpm test
