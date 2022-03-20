@@ -1,0 +1,55 @@
+{
+  "scripts": {
+    "prepublishOnly": "npm run build:index-js && npm run build:publish",
+    "lint": "eslint .",
+    "build:index-js": "create-index-js -n lib",
+    "build:tsc": "tsc",
+    "test": "mocha dist/tests",
+    "build:docs": "typedoc lib/index.js",
+    "build:publish": "tsc --project tsconfigPublish.json"
+  },
+  "name": "map-get-or-set",
+  "version": "0.1.0",
+  "homepage": "https://github.com/ChocolateLoverRaj/map-get-or-set#readme",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChocolateLoverRaj/map-get-or-set.git"
+  },
+  "devDependencies": {
+    "@programmerraj/create-index-js": "^1.0.3",
+    "@types/mocha": "^9.1.0",
+    "@types/sinon": "^10.0.11",
+    "@typescript-eslint/eslint-plugin": "^4.0.1",
+    "@typescript-eslint/parser": "^4.0.0",
+    "eslint": "^7.12.1",
+    "eslint-config-standard-with-typescript": "21.0.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1 || ^5.0.0",
+    "mocha": "^9.2.2",
+    "release-it": "^14.13.0",
+    "sinon": "^13.0.1",
+    "typedoc": "^0.21.10",
+    "typescript": "^4.7.0-dev.20220320"
+  },
+  "type": "module",
+  "exports": "./dist/index.js",
+  "author": {
+    "name": "Rajas Paranjpe",
+    "url": "https://github.com/ChocolateLoverRaj"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "javascript",
+    "map",
+    "get",
+    "set",
+    "typescript",
+    "mocha",
+    "esmodule"
+  ],
+  "description": "Gets a value for a given key in a map, setting the fallback value if it doesn't exist."
+}
