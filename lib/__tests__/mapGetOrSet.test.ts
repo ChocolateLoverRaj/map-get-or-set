@@ -1,4 +1,4 @@
-import { mapGetOrSet } from '../lib/index.js'
+import { mapGetOrSet } from '../index.js'
 import { fake } from 'sinon'
 import { equal } from 'assert/strict'
 
