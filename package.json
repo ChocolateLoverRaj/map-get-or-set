@@ -2,9 +2,9 @@
   "scripts": {
     "prepublishOnly": "npm run build:index-js && npm run build:publish",
     "lint": "eslint .",
-    "build:index-js": "create-index-js -n lib",
+    "build:index-js": "create-index-js -i .js -c dirs.txt lib",
     "build:tsc": "tsc",
-    "test": "mocha dist/tests",
+    "test": "mocha dist/**/__tests__/*.js",
     "build:docs": "typedoc lib/index.js",
     "build:publish": "tsc --project tsconfigPublish.json"
   },
@@ -17,7 +17,7 @@
     "url": "git+https://github.com/ChocolateLoverRaj/map-get-or-set.git"
   },
   "devDependencies": {
-    "@programmerraj/create-index-js": "^1.0.3",
+    "@programmerraj/create-index-js": "^5.0.0",
     "@types/mocha": "^9.1.0",
     "@types/sinon": "^10.0.11",
     "@typescript-eslint/eslint-plugin": "^4.0.1",
